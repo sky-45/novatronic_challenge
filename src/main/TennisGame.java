@@ -26,7 +26,7 @@ public class TennisGame {
 
         return probability < 0.5 ? firstPlayer : secondPlayer;
     }
-    private void assignPointsToWinner(Player winner) {
+    public void assignPointsToWinner(Player winner) {
         if(winner.getName().equals(this.firstPlayer.getName())){
             this.firstPlayer.setPoints(this.firstPlayer.getPoints() + 1);
         }
@@ -121,13 +121,13 @@ public class TennisGame {
         this.setPlayers(firstPlayer, secondPlayer);
     }
     public Player getFirstPlayer() {
-        return firstPlayer;
+        return this.firstPlayer;
     }
     public void setFirstPlayer(Player firstPlayer) {
         this.firstPlayer = firstPlayer;
     }
     public Player getSecondPlayer() {
-        return secondPlayer;
+        return this.secondPlayer;
     }
     public void setSecondPlayer(Player secondPlayer) {
         this.secondPlayer = secondPlayer;
